@@ -31,7 +31,8 @@ form.addEventListener("submit", async (e) => {
     await addDoc(collection(db, "Contacts"), {
       email: email,
       createdAt: serverTimestamp(),
-      source: "affiliate_landing"
+      source: "affiliate_landing",
+      lastEmailed: null
     });
 
     window.location.href = "thankyou.html";
